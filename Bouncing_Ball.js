@@ -12,7 +12,8 @@ function draw() {
   ellipse(200, xval, 25);
   if (xval > width - 100){   
     speed -= 1;   
-  }else{
+    
+  } else{
     
   speed += 0.5;
     
