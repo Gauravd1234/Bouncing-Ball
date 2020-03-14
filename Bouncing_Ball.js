@@ -1,28 +1,29 @@
-
-var xval = 400;
-var speed = 0;
+var x = 200;
+var y = 360;
+var speed = 12;
+var gravity = 0.3;
 
 function setup() {
   createCanvas(400, 400);
 }
 
 function draw() {
-  background(0);
-  fill(255, 0, 0);
-  ellipse(200, xval, 25);
-  if (xval > width - 100){   
-    speed -= 1;   
-    
-  } else{
-    
-  speed += 0.5;
-    
+  background(225);
+  
+  stroke(0);
+  strokeWeight(5);
+
+  ellipse(x, y, 25);
+
+
+  y -= speed;
+  speed -= gravity;
+
+  if (y > width - 20) {
+    speed = 12;
+    gravity = 0.3;
+
   }
-  
-  
-  xval += speed;
-  
-  
+
+
 }
-
-
